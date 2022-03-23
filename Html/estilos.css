@@ -1,39 +1,283 @@
-table, th, td{
-    border: 1px solid black;
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200;300;400;500;600;700;800&family=Fredoka:wght@300;400;500;600;700&family=Oswald:wght@200;300;400;500&family=Pacifico&family=Roboto:ital,wght@0,100;0,300;1,100&family=Stint+Ultra+Condensed&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
-h1{
-    font-size: 400%;
-    text-align: center;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-}
-a{
-    font-size: 150%;
-}
+
+header{
+    font-family: Helvetica;
+    width: 480px;
+    margin: 0 auto;
+  }
+  ul{
+    list-style: none;
+  }
+  #menu li>a{
+    background-color: grey;
+    color: white;
+    padding: 10px;
+    display: block;
+    text-decoration: none;
+    min-width: 100px;
+  }
+  #menu li>a:hover{
+    color: #000;
+    background-color: #eaeaea;
+  }
+  #menu>li{
+    float: left;
+    text-align:center
+  }
+  #menu>li>ul{
+    display: none;
+  }
+  #menu>li:hover>ul {
+    display:block;
+  }
 
 body{
-    background-color:rgb(227, 251, 255);
-    width: 100%;
+    font-family: 'Fredoka', sans-serif;
+}
+
+.container{
+    width: 90%;
+    min-height: 100hv;
     max-width: 1200px;
+    margin: 0 auto;
+    overflow: hidden;
 }
 
-.articulo{
-    border: 2px;
-    border-radius: 5px;
+.slider{
+    background-color: rgb(255, 255, 255);
+    padding: 40px 0;
+}
+
+.slider_container{
+    display: grid;
+    grid-template-columns: 50px 1fr 50px;
+    align-items: center;
+    gap: 1em;
+}
+
+.slider_body{
+    grid-column: 2/3;
+    grid-row: 1/2;
+    opacity: 0;
+    pointer-events: none;
+    display: grid;
+    background-color: #ffffff;
+    grid-template-columns: 1fr max-content;
+    align-items: center;
+    transition: opacity 1.5s;
+}
+
+.slider_body--show{
+    opacity: 1;
+    pointer-events: unset;
+}
+
+.slider_texts{
+    max-width: 600px;
+}
+
+.subtitle{
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.slider_review{
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 1.7;
+}
+
+.slider_img{
+    width: 230px;
+    height: 230px;
+    border-radius: 50%;
+    object-fit: cover;
+    display: block;
+    margin: 0 auto;
+}
+
+.slider_arrow{
+    cursor: pointer;
+    width: 90%;
+}
+
+#animales {
+    display:inline-block;
+    width:100%;
+    margin-top:50px;
+    align-items: left;
+    border: 1px solid;
+   }
+   
+   /*Columnas*/
+   
+   .gatos {
+    display:inline-block;
+    background-color:#f3f3f3;
+    width:100%;
+    max-width:500px;
+    border-radius:10px;
+    margin-bottom:50px;
+    box-shadow: 0px 2px 5px #ddd
+   }
+   
+   @media screen and (min-width:768px) {
+    .precio-col {
+    width:32%;
+    float:left;
+    margin-right:2%
+    }
     
-}
+    .precio-col:last-child {
+    margin-right:0
+    }
+   }
 
-div#contenedor section{
-    float: left;
-    width: 70%;
-}
+   .perros{
+    display:inline-block;
+    background-color:#f3f3f3;
+    width:100%;
+    max-width:500px;
+    border-radius:10px;
+    margin-bottom:50px;
+    box-shadow: 0px 2px 5px #ddd
+   }
+   
+   @media screen and (min-width:768px) {
+    .precio-col {
+    width:32%;
+    float:left;
+    margin-right:2%
+    }
+    
+    .precio-col:last-child {
+    margin-right:0
+    }
+   }
+   
+   /* Cabecera animales */
+   
+   .img_cabecera1 {
+    background-color: rgb(146, 146, 146);
+    background-image: url(https://www.globalmascota.com/data/fotos/por-que-se-les-caen-los-bigotes-a-los-gatos.jpg);
+    background-size: 25rem;
+    background-position: center ;
+    padding:60px;
+    border-top-left-radius:10px;
+    border-top-right-radius:10px;
+    width: 15%;
+    align-items: center;
 
-div#contenedor aside{
-    float: left;
-    width: 25%;
-    margin: 5%;
-}
+   }
 
-footer{
-    background-color: rgb(137, 241, 241);
-    float: left;
-}
+   .img_cabecera2 {
+    background-color: rgb(146, 146, 146);
+    background-image: url(https://s1.eestatic.com/2020/06/30/curiosidades/mascotas/mascotas_501711745_154816138_1706x960.jpg);
+    background-size: 25rem;
+    background-position: center ;
+    padding:60px;
+    border-top-left-radius:10px;
+    border-top-right-radius:10px;
+    width: 15%;
+    align-items: center;
+
+   }
+
+   .img_cabecera3 {
+    background-color: rgb(146, 146, 146);
+    background-image: url(https://okdiario.com/img/2021/07/03/conejo.jpg);
+    background-size: 30rem;
+    background-position: center ;
+    padding:60px;
+    border-top-left-radius:10px;
+    border-top-right-radius:10px;
+    width: 15%;
+    align-items: center;
+
+   }
+
+   /* botones anim */
+   
+   .gatos:nth-child(2) .img_cabecera1 {
+    background-color:#dd9933
+   }
+   .perros:nth-child(2) .img_cabecera2 {
+    background-color:#dd9933
+   }
+   .conejos:nth-child(2) .img_cabecera3 {
+    background-color:#dd9933
+   }
+   
+   .img_cabecera1 .img_cabecera2.img_cabecera3 h3 {
+    color:#f3f3f3;
+    text-align:left;
+    font-size:30px;
+    font-weight:600;
+    margin-bottom:0
+   }
+   
+   .img_cabecera1 .img_cabecera2 .img_cabecera3 p {
+    text-align:left;
+    color:#f3f3f3;
+    font-size:14px;
+    margin-bottom:0
+   }
+   
+   /*Características*/
+   
+   .descripcion {
+    padding: 0 20px 20px 20px
+   }
+   
+   .descripcion p {
+    padding:20px 0;
+    margin:0;
+    text-align:left;
+    border-top:1px solid #ddd
+   }
+   
+   .descripcion p:first-child,
+   .descripcion p:last-child {
+    border-top:none
+   }
+   
+   /*ver mas*/
+   
+   .ver-mas {
+    padding:10px;
+    max-width:250px;
+    text-align:left;
+    background-color:#dd9933;
+    margin: 0 auto 20px;
+    border-radius:10px;
+    border: 2px solid #dd9933;
+    transition: all 0.3s;
+    box-align:left;
+   }
+   
+   .ver-mas a {
+    color:#f3f3f3;
+    padding:10px;
+    font-size:20px;
+    text-transform:uppercase;
+    transition: all 0.3s;
+    align-items: left;
+   }
+   
+   .ver-mas:hover {
+    background-color:#f3f3f3;
+    transition: all 0.3s;
+    align-items: left;
+   }
+   
+   .ver-mas:hover a {
+    color:#dd9933;
+    transition: all 0.3s;
+    align-items: left;
+   }
