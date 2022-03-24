@@ -11,7 +11,20 @@ header{
     width: 480px;
     margin: 0 auto;
   }
-  ul{
+
+nav{
+  float: center bottom;
+}
+
+.cabecera h1{
+  float: center;
+}
+
+#presentacion{
+  text-align: center;
+}
+
+ul{
     list-style: none;
   }
   #menu li>a{
@@ -48,6 +61,8 @@ body{
     margin: 0 auto;
     overflow: hidden;
 }
+
+/* Equipo de la fundacion */
 
 .slider{
     background-color: rgb(255, 255, 255);
@@ -107,12 +122,19 @@ body{
     width: 90%;
 }
 
+/* Presentacion de los animales */
+
 #animales {
     display:inline-block;
-    width:100%;
+    width:50%;
     margin-top:50px;
-    align-items: left;
-    border: 1px solid;
+    border: 1px;
+    display: inline-block;
+    width: auto;
+    margin: auto;
+    padding: 20px, 20px;
+    text-align: justify;
+    display: block;
    }
    
    /*Columnas*/
@@ -120,7 +142,7 @@ body{
    .gatos {
     display:inline-block;
     background-color:#f3f3f3;
-    width:100%;
+    width:70%;
     max-width:500px;
     border-radius:10px;
     margin-bottom:50px;
@@ -128,13 +150,13 @@ body{
    }
    
    @media screen and (min-width:768px) {
-    .precio-col {
-    width:32%;
+    .gatos {
+    width:50%;
     float:left;
     margin-right:2%
     }
     
-    .precio-col:last-child {
+    .gatos:last-child {
     margin-right:0
     }
    }
@@ -142,21 +164,22 @@ body{
    .perros{
     display:inline-block;
     background-color:#f3f3f3;
-    width:100%;
+    width:70%;
     max-width:500px;
     border-radius:10px;
     margin-bottom:50px;
     box-shadow: 0px 2px 5px #ddd
+    
    }
    
    @media screen and (min-width:768px) {
-    .precio-col {
-    width:32%;
+    .perros {
+    width:50%;
     float:left;
     margin-right:2%
     }
     
-    .precio-col:last-child {
+    .perros:last-child {
     margin-right:0
     }
    }
@@ -166,12 +189,13 @@ body{
    .img_cabecera1 {
     background-color: rgb(146, 146, 146);
     background-image: url(https://www.globalmascota.com/data/fotos/por-que-se-les-caen-los-bigotes-a-los-gatos.jpg);
-    background-size: 25rem;
-    background-position: center ;
-    padding:60px;
+    background-size: 40rem;
+    background-position: center top ;
+    padding: 100px 250px;
     border-top-left-radius:10px;
     border-top-right-radius:10px;
-    width: 15%;
+    width: 50px;
+    height: 10px;
     align-items: center;
 
    }
@@ -179,25 +203,13 @@ body{
    .img_cabecera2 {
     background-color: rgb(146, 146, 146);
     background-image: url(https://s1.eestatic.com/2020/06/30/curiosidades/mascotas/mascotas_501711745_154816138_1706x960.jpg);
-    background-size: 25rem;
-    background-position: center ;
-    padding:60px;
+    background-size: 40rem;
+    background-position: center;
+    padding: 100px 250px;
     border-top-left-radius:10px;
     border-top-right-radius:10px;
-    width: 15%;
-    align-items: center;
-
-   }
-
-   .img_cabecera3 {
-    background-color: rgb(146, 146, 146);
-    background-image: url(https://okdiario.com/img/2021/07/03/conejo.jpg);
-    background-size: 30rem;
-    background-position: center ;
-    padding:60px;
-    border-top-left-radius:10px;
-    border-top-right-radius:10px;
-    width: 15%;
+    width: 50px;
+    height: 10px;
     align-items: center;
 
    }
@@ -214,7 +226,7 @@ body{
     background-color:#dd9933
    }
    
-   .img_cabecera1 .img_cabecera2.img_cabecera3 h3 {
+   .img_cabecera1 .img_cabecera2 h3 {
     color:#f3f3f3;
     text-align:left;
     font-size:30px;
@@ -229,29 +241,11 @@ body{
     margin-bottom:0
    }
    
-   /*Características*/
-   
-   .descripcion {
-    padding: 0 20px 20px 20px
-   }
-   
-   .descripcion p {
-    padding:20px 0;
-    margin:0;
-    text-align:left;
-    border-top:1px solid #ddd
-   }
-   
-   .descripcion p:first-child,
-   .descripcion p:last-child {
-    border-top:none
-   }
-   
    /*ver mas*/
    
    .ver-mas {
     padding:10px;
-    max-width:250px;
+    max-width:150px;
     text-align:left;
     background-color:#dd9933;
     margin: 0 auto 20px;
@@ -280,4 +274,9 @@ body{
     color:#dd9933;
     transition: all 0.3s;
     align-items: left;
+   }
+
+   .page{
+    display: table;
+    width: 100%
    }
